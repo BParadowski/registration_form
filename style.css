@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(241, 241, 241);
+    font-family: 'Gloria Hallelujah', cursive;
+    box-sizing: border-box;
+}
+.content{
+    min-width: 900px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+}
+.left {
+    position: relative;
+    height: 100vh;
+}
+.left img{
+    height: 100%;
+    width: auto;
+}
+.logo {
+    position: absolute;
+    top: 20vh;
+    width: 100%;
+    background-color: rgb(36, 36, 36, 0.7);
+    height: 20vh;
+
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.8rem;
+    color: antiquewhite;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo .palm{
+    height: 17vh;
+    width: auto;
+}
+.right{
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.right>div{
+    padding: 20px;
+    color: rgb(92, 92, 92);
+}
+.formDiv{
+    background-color: rgb(249, 249, 249);
+    height: 40vh;
+    width: 100%;
+    box-shadow: 3px 3px 3px 1px gainsboro;
+    border-radius: 5px;
+}
+
+.formDiv legend{
+    font-size: 1.4rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+form>div>div {
+    position: relative;
+    margin-bottom: 3rem;
+}
+.formDiv label{
+    position: absolute;
+    top: -1.5em;
+}
+
+.formDiv input{
+    width: 40%;
+    margin-right: 5%;
+    border: 1px solid rgb(92, 92, 92);
+    height: 1.5rem;
+    border-radius: 5px;
+    font-family: 'Gloria Hallelujah', cursive;
+    padding: 0 5px;
+}
+
+input:not(:default):invalid{
+    border-color: palevioletred;
+}
