@@ -3,33 +3,36 @@
 * {
     margin: 0;
     padding: 0;
-    border: 0;
 }
 
 body {
-    height: 100vh;
     background-color: rgb(241, 241, 241);
     font-family: 'Gloria Hallelujah', cursive;
     box-sizing: border-box;
 }
 .content{
     min-width: 900px;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
 
     display: flex;
+    background-color: rgb(255, 255, 255);
 }
 .left {
-    position: relative;
+    flex: auto;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-}
-.left img{
-    height: 100%;
     width: auto;
+
+
+    background-image: url(./background.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .logo {
-    position: absolute;
-    top: 20vh;
+    margin-top: 20vh;
     width: 100%;
     background-color: rgb(36, 36, 36, 0.7);
     height: 20vh;
@@ -52,21 +55,24 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 25px;
 }
 .right>div{
-    padding: 20px;
+
     color: rgb(92, 92, 92);
+    padding-left: 25px;
 }
 .formDiv{
     background-color: rgb(249, 249, 249);
-    height: 40vh;
-    width: 100%;
+    max-height: 40vh;
+    width: calc(100%-25px);
     box-shadow: 3px 3px 3px 1px gainsboro;
     border-radius: 5px;
 }
 
 .formDiv legend{
     font-size: 1.4rem;
+    max-height: 12vh;
 }
 form{
     display: flex;
@@ -87,12 +93,33 @@ form>div>div {
     width: 40%;
     margin-right: 5%;
     border: 1px solid rgb(92, 92, 92);
-    height: 1.5rem;
+    max-height: 1.5rem;
     border-radius: 5px;
     font-family: 'Gloria Hallelujah', cursive;
     padding: 0 5px;
 }
 
-input:not(:default):invalid{
+input.error{
     border-color: palevioletred;
+    background-color: rgb(227, 193, 205);
+}
+input:valid{
+    border-color: greenyellow;
+}
+input:focus-visible{
+    border-width: 2px;
+    border-color: rgb(27, 120, 243);
+    box-shadow: 2px 2px 1px 0 paleturquoise;
+    outline:none;
+}
+
+input + span{
+    visibility: hidden;
+}
+input.error + span {
+    visibility: visible;
+}
+a{
+    text-decoration: none;
+    color: aquamarine;
 }
